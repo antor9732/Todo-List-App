@@ -22,8 +22,11 @@ const addTodo = () => {
     category: input_category.value,
     done: false,
     createdAt: new Date().getTime(),
-  });
-};
+  })
+}
+const deleteTodo = todo => {
+  todos.value = todos.value.filter((t) => t !== todo)
+}
 
 watch(
   todos,
@@ -105,6 +108,10 @@ onMounted(() => {
           
           <div class="todo-content">
             <input type="text" v-model="todo.content" />
+          </div>
+
+          <div class="actions">
+            <button class="delete" @click="deleteTodo(todo)">Delete</button>
           </div>
 
         </div>
