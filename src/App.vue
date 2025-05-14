@@ -23,6 +23,8 @@ const addTodo = () => {
     done: false,
     createdAt: new Date().getTime(),
   })
+  input_content.value = ""
+  input_category.value = null
 }
 const deleteTodo = todo => {
   todos.value = todos.value.filter((t) => t !== todo)
