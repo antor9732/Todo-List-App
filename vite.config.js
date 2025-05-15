@@ -10,6 +10,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
+  base : 'Todo-List-App',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
