@@ -63,7 +63,7 @@ onMounted(() => {
         <h4>What's on your todo List?</h4>
         <input
           type="text"
-          placeholder="e.g.make a video"
+          placeholder="Enter your todo Items"
           v-model="input_content"
         />
 
